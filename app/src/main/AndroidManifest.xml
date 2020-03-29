@@ -4,9 +4,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/alsabag_tv"
+        android:icon="@mipmap/alsabag_tv2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/alsabag_tv_round"
+        android:roundIcon="@mipmap/alsabag_tv2_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
