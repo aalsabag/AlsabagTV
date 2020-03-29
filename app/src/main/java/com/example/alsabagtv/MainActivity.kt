@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 Log.d("CREATED", "Page finished loading")
                 Log.d("CREATED", url )
-                Thread.sleep(5000)
                 if (url != null) {
                     if (url.contains("id=")){
+                        Thread.sleep(5000)
                         Log.d("CREATED", "Removing pop up ads")
                         superSafeWebView.loadUrl(
                             "javascript:(function() { " +
