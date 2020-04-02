@@ -3,6 +3,7 @@ package com.example.alsabagtv
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -28,7 +29,12 @@ class MainActivity : AppCompatActivity() {
                         Log.d("CREATED", "Removing pop up ads")
                         superSafeWebView.loadUrl(
                             "javascript:(function() { " +
+                                    "var element = document.getElementsByTagName('iframe');"+
+                                    "if(element[0].name.includes('youtube')){" +
+                                    "element[1].remove();" +
+                                    "}else {"+
                                     "document.getElementsByTagName('iframe')[0].remove();"+
+                                    "}"+
                                     "})()");
                     }
                 }
@@ -46,10 +52,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed(){
         if(superSafeWebView.canGoBack()) {
-            print("Can go back")
+            Log.d("CREATED", "Can go back")
             superSafeWebView.goBack()
         }else {
             super.onBackPressed()
         }
     }
+
 }
