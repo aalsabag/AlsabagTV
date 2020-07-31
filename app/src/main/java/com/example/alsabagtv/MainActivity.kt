@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         getSupportActionBar()?.hide()
         superSafeWebView = WebView(applicationContext)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
         superSafeWebView.webViewClient = object : WebViewClient(){
             override fun onPageFinished(view: WebView?, url: String?) {
                 Log.d("CREATED", "Page finished loading")
@@ -34,6 +37,9 @@ class MainActivity : AppCompatActivity() {
                                     "element[1].remove();" +
                                     "}else {"+
                                     "document.getElementsByTagName('iframe')[0].remove();"+
+                                    "}"+
+                                    "if (document.getElementsByClassName(\"_9ehkpq\")[0]){"+
+                                    "document.getElementsByClassName(\"_9ehkpq\")[0].click()"+
                                     "}"+
                                     "})()");
                     }
