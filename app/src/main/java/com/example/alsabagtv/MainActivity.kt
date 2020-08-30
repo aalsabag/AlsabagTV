@@ -42,6 +42,12 @@ class MainActivity : AppCompatActivity() {
                                     "if (document.getElementsByClassName(\"_9ehkpq\")[0]){"+
                                     "document.getElementsByClassName(\"_9ehkpq\")[0].click()"+
                                     "}"+
+                                    "if (document.getElementsByClassName(\"_aeonhsr\")[0]){"+
+                                    "document.getElementsByClassName(\"_aeonhsr\")[0].click()"+
+                                    "}"+
+                                    "if (document.getElementById(\"ad_asd\")){"+
+                                    "document.getElementById(\"ad_asd\").remove()"+
+                                    "}"+
                                     "if (document.getElementById(\"player\")){"+
                                     "document.getElementById(\"player\").play()"+
                                     "}"+
