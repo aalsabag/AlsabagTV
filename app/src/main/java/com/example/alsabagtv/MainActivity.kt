@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         superSafeWebView = WebView(applicationContext)
         //Add lines to open debugger
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            WebView.setWebContentsDebuggingEnabled(true);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            WebView.setWebContentsDebuggingEnabled(true);
+//        }
         superSafeWebView.webViewClient = object : WebViewClient(){
             override fun onPageFinished(view: WebView?, url: String?) {
                 Log.d("CREATED", "Page finished loading")
@@ -33,12 +33,15 @@ class MainActivity : AppCompatActivity() {
                         Log.d("CREATED", "Removing pop up ads")
                         superSafeWebView.loadUrl(
                             "javascript:(function() { " +
+                                    "try { " +
                                     "var element = document.getElementsByTagName('iframe');"+
+                                    "if (element[0]) {" +
                                     "if(element[0].name.includes('youtube')){" +
                                     "element[1].remove();" +
                                     "}else {"+
                                     "document.getElementsByTagName('iframe')[0].remove();"+
                                     "}"+
+                                    "}" +
                                     "if (document.getElementsByClassName(\"_9ehkpq\")[0]){"+
                                     "document.getElementsByClassName(\"_9ehkpq\")[0].click()"+
                                     "}"+
@@ -49,16 +52,20 @@ class MainActivity : AppCompatActivity() {
                                     "document.getElementById(\"ad_asd\").remove()"+
                                     "}"+
                                     "if (document.getElementById(\"player\")){"+
-                                    "document.getElementById(\"player\").play()"+
+
                                     "var searchEles = document.getElementById(\"player\").children;" +
                                     "for(var i = 0; i < searchEles.length; i++) {" +
                                     "if(searchEles[i].id == 'player') {" +
                                     "searchEles[i].play();" +
                                     "}" +
                                     "}" +
+                                    "document.getElementById(\"player\").play();"+
                                     "}" +
                                     "if (document.getElementById(\"1player_2\")){"+
                                     "document.getElementById(\"1player_2\").play()"+
+                                    "}"+
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
                                     "}"+
                                     "})()");
                     }
