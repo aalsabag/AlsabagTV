@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         superSafeWebView = WebView(applicationContext)
         //Add lines to open debugger
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            WebView.setWebContentsDebuggingEnabled(true);
-//        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
         superSafeWebView.webViewClient = object : WebViewClient(){
             override fun onPageFinished(view: WebView?, url: String?) {
                 Log.d("CREATED", "Page finished loading")
@@ -50,7 +50,13 @@ class MainActivity : AppCompatActivity() {
                                     "}"+
                                     "if (document.getElementById(\"player\")){"+
                                     "document.getElementById(\"player\").play()"+
-                                    "}"+
+                                    "var searchEles = document.getElementById(\"player\").children;" +
+                                    "for(var i = 0; i < searchEles.length; i++) {" +
+                                    "if(searchEles[i].id == 'player') {" +
+                                    "searchEles[i].play();" +
+                                    "}" +
+                                    "}" +
+                                    "}" +
                                     "if (document.getElementById(\"1player_2\")){"+
                                     "document.getElementById(\"1player_2\").play()"+
                                     "}"+
