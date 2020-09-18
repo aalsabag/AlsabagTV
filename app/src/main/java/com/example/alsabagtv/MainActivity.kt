@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         superSafeWebView = WebView(applicationContext)
         //Add lines to open debugger
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            WebView.setWebContentsDebuggingEnabled(true);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            WebView.setWebContentsDebuggingEnabled(true);
+//        }
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         superSafeWebView.webViewClient = object : WebViewClient(){
             override fun onPageFinished(view: WebView?, url: String?) {
