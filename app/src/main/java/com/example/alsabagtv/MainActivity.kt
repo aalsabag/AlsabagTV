@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()?.hide()
         superSafeWebView = WebView(applicationContext)
         //Add lines to open debugger
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            WebView.setWebContentsDebuggingEnabled(true);
-//        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         superSafeWebView.webViewClient = object : WebViewClient(){
             override fun onPageFinished(view: WebView?, url: String?) {
@@ -47,6 +47,20 @@ class MainActivity : AppCompatActivity() {
                                     "} catch (error) {" +
                                     "console.log(error);" +
                                     "console.log(\"error 1\");" +
+                                    "}"+
+
+                                    "try {" +
+                                    "document.getElementsByClassName(\"_zb9zv92 _egf31ph\")[0].remove();" +
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 5\");" +
+                                    "}"+
+
+                                    "try {" +
+                                    "document.getElementsByClassName(\"megbylsm\")[0].remove();" +
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 6\");" +
                                     "}"+
 
                                     "if (document.getElementsByClassName(\"_9ehkpq\")[0]){"+
@@ -76,7 +90,7 @@ class MainActivity : AppCompatActivity() {
 
                                     "try {" +
                                     "if (document.getElementById(\"1player_2\")){"+
-                                    "document.getElementById(\"1player_2\").play()"+
+                                    "document.getElementById(\"1player_2\").play();"+
                                     "}"+
                                     "} catch (error) {" +
                                     "console.log(error);" +
@@ -84,11 +98,24 @@ class MainActivity : AppCompatActivity() {
                                     "}"+
 
                                     "try {" +
-                                    "document.getElementsByClassName(\"_6sdryz9 \")[0].click();" +
+                                    "document.getElementsByClassName(\"_6sdryz9\")[0].click();" +
                                     "} catch (error) {" +
                                     "console.log(error);" +
                                     "console.log(\"error 4\");" +
                                     "}"+
+
+                                    "try {" +
+                                    "var elms = document.getElementById(\"player\").getElementsByTagName(\"*\");" +
+                                    "for (var i = 0; i < elms.length; i++) {" +
+                                    "if (elms[i].id === \"player\") {" +
+                                    "elms[i].style[\"object-fit\"] = \"cover\";" +
+                                    "break;" +
+                                    "}"+
+                                    "}"+
+                                    "} catch(error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 6\");" +
+                                    "}" +
                                     "})()");
                     }
                 }
