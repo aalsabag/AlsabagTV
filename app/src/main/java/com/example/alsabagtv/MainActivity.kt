@@ -57,6 +57,13 @@ class MainActivity : AppCompatActivity() {
                                     "}"+
 
                                     "try {" +
+                                     "   document.getElementsByClassName(\"_zyjw2i2 _bu8cnqq\")[0].remove();" +
+                                    "} catch (error) {" +
+                                        "console.log(error);" +
+                                        "console.log(\"error 5\");" +
+                                    "}" +
+
+                                    "try {" +
                                     "document.getElementsByClassName(\"megbylsm\")[0].remove();" +
                                     "} catch (error) {" +
                                     "console.log(error);" +
