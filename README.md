@@ -3,6 +3,7 @@ An android app for Elahmad tv that is designed for Fire Televisions by automatic
 
 ## javascript executed
 ```javascript
+
 javascript:(function() { 
 	try { 
 		var element = document.getElementsByTagName('iframe');
@@ -86,6 +87,7 @@ javascript:(function() {
 		console.log("error 6");
 	}
 })()
+
 ```
 
 ## Channels to test

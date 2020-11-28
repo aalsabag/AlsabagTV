@@ -63,6 +63,13 @@ class MainActivity : AppCompatActivity() {
                                         "console.log(\"error 5\");" +
                                     "}" +
 
+                                   "try {" +
+                                   "     document.getElementById(\"_cqiw04c\").remove();" +
+                                    " } catch (error) {" +
+                                    "    console.log(error); " +
+                                    "    console.log(\"error 6.5\")" +
+                                    "}" +
+
                                     "try {" +
                                     "document.getElementsByClassName(\"megbylsm\")[0].remove();" +
                                     "} catch (error) {" +
