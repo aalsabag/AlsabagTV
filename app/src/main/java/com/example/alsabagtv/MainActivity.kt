@@ -137,6 +137,9 @@ class MainActivity : AppCompatActivity() {
                                     "console.log(error);" +
                                     "console.log(\"error 6\");" +
                                     "}" +
+
+                                    "if (document.querySelectorAll('html > div').length == 1) {document.querySelector('html > div').remove()}" +
+
                                     "})()");
                     }
                 }
