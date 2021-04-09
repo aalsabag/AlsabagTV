@@ -44,6 +44,12 @@ javascript:(function() {
       conole.log(error);
       console.log("error 7");
   }
+  try {
+    document.getElementsByClassName("_hyaprrm")[0].remove()
+  } catch (error) {
+      conole.log(error);
+      console.log("error 8");
+  }
 
 	if (document.getElementsByClassName("_9ehkpq")[0]){
 		document.getElementsByClassName("_9ehkpq")[0].click()

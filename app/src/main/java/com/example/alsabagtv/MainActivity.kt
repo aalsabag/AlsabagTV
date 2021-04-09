@@ -77,12 +77,20 @@ class MainActivity : AppCompatActivity() {
                                     "console.log(\"error 6\");" +
                                     "}"+
 
+
                                     "try {" +
                                     "		document.getElementsByClassName(\"_vgbnxwp\")[0].remove()" +
                                     "	} catch (error) {" +
                                     "		console.log(error);" +
                                     "		console.log(\"error 7\");" +
                                     "	}" +
+
+                                    "try {" +
+                                    "document.getElementsByClassName(\"_hyaprrm\")[0].remove();" +
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 8\");" +
+                                    "}"+
 
                                     "if (document.getElementsByClassName(\"_9ehkpq\")[0]){"+
                                     "document.getElementsByClassName(\"_9ehkpq\")[0].click()"+
