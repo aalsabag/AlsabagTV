@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.webkit.*
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 
@@ -30,8 +31,14 @@ open class ErrorTolerantWebView: WebViewClient() {
         toastView.setBackgroundColor(Color.GREEN)
         val toastText: TextView = toastView.findViewById(android.R.id.message);
         toastText.setTextColor(Color.WHITE)
+        val layout = toast.view as LinearLayout
+        if (layout.childCount > 0) {
+            val tv = layout.getChildAt(0) as TextView
+            tv.gravity = Gravity.CENTER_VERTICAL or Gravity.CENTER_HORIZONTAL
+        }
         toast.show()
         super.onReceivedError(view, request, error)
+
     }
 
     override fun onReceivedHttpError(
