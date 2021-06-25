@@ -1,6 +1,4 @@
-// javascript:(function() {
-//     alert("hello world")
-//     void(0)
-// })
+(function( window, undefined ) { 
 alert("hello world");
-void(0);
+
+})
