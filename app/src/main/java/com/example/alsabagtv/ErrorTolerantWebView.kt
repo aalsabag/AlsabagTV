@@ -28,9 +28,9 @@ open class ErrorTolerantWebView: WebViewClient() {
         )
         toast.setGravity(Gravity.TOP or Gravity.CENTER, 0, 0)
         val toastView: View = toast.view
-        toastView.setBackgroundColor(Color.GREEN)
+        toastView.setBackgroundColor(Color.rgb(169,165,77))
         val toastText: TextView = toastView.findViewById(android.R.id.message);
-        toastText.setTextColor(Color.WHITE)
+        toastText.setTextColor(Color.BLACK)
         val layout = toast.view as LinearLayout
         if (layout.childCount > 0) {
             val tv = layout.getChildAt(0) as TextView
