@@ -1,4 +1,3 @@
-(function( window, undefined ) { 
-alert("hello world");
-
-})
+function myFunction() {
+  alert("hello world");
+}
