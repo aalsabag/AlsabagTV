@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                     if (url.contains("id=")){
                         Thread.sleep(5000)
                         Log.d("CREATED", "Removing pop up ads")
+
                         superSafeWebView.loadUrl(
                             "javascript:(function() { " +
                                     "try { " +
@@ -51,6 +52,13 @@ class MainActivity : AppCompatActivity() {
 
                                     "try {" +
                                     "document.getElementsByClassName(\"_zb9zv92 _egf31ph\")[0].remove();" +
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 5\");" +
+                                    "}"+
+
+                                    "try {" +
+                                    "document.getElementsByClassName(\"_wfzigbu _q3mnaj9\")[0].remove();" +
                                     "} catch (error) {" +
                                     "console.log(error);" +
                                     "console.log(\"error 5\");" +
