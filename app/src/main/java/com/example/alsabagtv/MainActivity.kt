@@ -71,6 +71,13 @@ class MainActivity : AppCompatActivity() {
                                         "console.log(\"error 5\");" +
                                     "}" +
 
+                                    "try {" +
+                                    "   document.getElementsByClassName(\"_n1mhbh _4ebefcm\")[0].remove();" +
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 5\");" +
+                                    "}" +
+
                                    "try {" +
                                    "     document.getElementById(\"_cqiw04c\").remove();" +
                                     " } catch (error) {" +
@@ -95,6 +102,13 @@ class MainActivity : AppCompatActivity() {
 
                                     "try {" +
                                     "document.getElementsByClassName(\"_hyaprrm\")[0].remove();" +
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 8\");" +
+                                    "}"+
+
+                                    "try {" +
+                                    "document.getElementsByClassName(\"_o2sqbyl _qx1cnish\")[0].remove();" +
                                     "} catch (error) {" +
                                     "console.log(error);" +
                                     "console.log(\"error 8\");" +
