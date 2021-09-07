@@ -84,4 +84,4 @@ javascript:(function() {
     if (document.querySelectorAll('html > div').length == 1) {document.querySelector('html > div').remove()}
 
     console.log('script complete!')
-})
+})()
