@@ -1,5 +1,5 @@
-
-    let ad_class_names = ['_63myj5r _lk70fcs', '_zb9zv92 _egf31ph', '_zyjw2i2 _bu8cnqq', 'megbylsm', '_vgbnxwp', '_hyaprrm', 'ad_asd', '_xf3ope _tcde9lb', '_pvfdbgu _0x5jfo', '_t7elg7 _80qfruc', '_sdmugjo _824udql', "_wfzigbu _q3mnaj9", "_o2sqbyl _qx1cnish" ];
+javascript:(function() {
+    let ad_class_names = ['_63myj5r _lk70fcs', '_zb9zv92 _egf31ph', '_zyjw2i2 _bu8cnqq', 'megbylsm', '_vgbnxwp', '_hyaprrm', 'ad_asd', '_xf3ope _tcde9lb', '_pvfdbgu _0x5jfo', '_t7elg7 _80qfruc', '_sdmugjo _824udql', "_wfzigbu _q3mnaj9", "_o2sqbyl _qx1cnish", "_n1mhbh _4ebefcm" ];
     let ad_id_names = ['ad_asd'];
     // Removing large ads
     for (let i = 0; i < ad_class_names.length; i++) {
@@ -84,5 +84,4 @@
     if (document.querySelectorAll('html > div').length == 1) {document.querySelector('html > div').remove()}
 
     console.log('script complete!')
-
-
+})
