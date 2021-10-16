@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         superSafeWebView.webViewClient = object : WebViewClient(){
-            override fun onPageFinished(view: WebView?, url: String?) {
+            override fun onPageFinished(view: WebView?, url: String) {
                 Log.d("CREATED", "Page finished loading")
                 Log.d("CREATED", url )
                 if (url != null) {
@@ -56,7 +56,12 @@ class MainActivity : AppCompatActivity() {
                                     "console.log(error);" +
                                     "console.log(\"error 5\");" +
                                     "}"+
-
+                                    "try {" +
+                                    "document.getElementsByClassName(\"_12e05si _1t0ogrp\")[0].remove();" +
+                                    "} catch (error) {" +
+                                    "console.log(error);" +
+                                    "console.log(\"error 5\");" +
+                                    "}"+
                                     "try {" +
                                     "document.getElementsByClassName(\"_wfzigbu _q3mnaj9\")[0].remove();" +
                                     "} catch (error) {" +
